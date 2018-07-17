@@ -39,6 +39,27 @@
 		content: none;
 	}
 
+	.box_1 h3{
+	  color: #000;
+	  font-size: 0.8em;
+	  font-family: 'Oswald', sans-serif;
+		margin: 28px;
+	}
+	.box_1 p a{
+	  color: #B5B3B3;
+	  font-size: 0.77em;
+	}
+
+	.cart.box_1{
+		float:left;
+		margin-top:5px;
+		width: 33%;
+	}
+
+	.total {
+	  display: inline-block;
+	}
+
 	table {
 		border-collapse: collapse;
 		border-spacing: 0;
@@ -2561,7 +2582,10 @@
 	}
 
 	header p {
+		position: absolute;
+		top: 1px;
 		color: #717171;
+		right: 170px;
 	}
 
 /* Table */
@@ -3163,11 +3187,12 @@
 		}
 
 			#header a:hover {
-				color: rgba(255, 255, 255, 0.75);
+				color: gray;
 			}
 
 			#header a:last-child {
 				padding-right: 0em;
+				width: -moz-max-content;
 			}
 
 			@media screen and (max-width: 736px) {
@@ -3955,4 +3980,74 @@
 				padding: 2em 0 0.1em 0;
 			}
 
+		}
+
+		/*--home block start here--*/
+		.home-block {
+		    padding:4em 0em 1em 0em;
+		}
+		.home-product-main {
+			position: relative;
+		    box-shadow: 0px 0px 1px 1px #ccc;
+		    margin-bottom: 3em;
+		}
+		.home-grid:hover .home-product-bottom{
+			 background:#EA572D;
+		}
+		.home-grid:hover .home-product-bottom h3 a{
+			color:#fff;
+			transition: 0.5s all ease;
+		    -webkit-transition: 0.5s all ease;
+		    -moz-transition: 0.5s all ease;
+		    -o-transition: 0.5s all ease;
+		    -ms-transition: 0.5s all ease;
+		}
+		.home-grid:hover .home-product-bottom p {
+			color:#fff;
+			transition: 0.5s all ease;
+		    -webkit-transition: 0.5s all ease;
+		    -moz-transition: 0.5s all ease;
+		    -o-transition: 0.5s all ease;
+		    -ms-transition: 0.5s all ease;
+		}
+		.home-grid:hover .home-product-main{
+			transition: 0.5s all ease;
+		    -webkit-transition: 0.5s all ease;
+		    -moz-transition: 0.5s all ease;
+		    -o-transition: 0.5s all ease;
+		    -ms-transition: 0.5s all ease;
+		}
+		.home-grid:hover .srch{
+			display:block;
+		}
+		.srch {
+		    display: none;
+		    position: absolute;
+		    top: 18%;
+		    right:-1px;
+		}
+		.srch span {
+		    background:#EA572D;
+		    color: #fff;
+		    font-size: 15px;
+		    font-weight: 400;
+		    padding: 10px 25px;
+		    border-radius: 18px 2px 16px 2px;
+		}
+		.home-product-bottom {
+		    padding: 1em 1.5em;
+		    background:#847057;
+		    box-shadow: 0px 0px 1px 0px rgba(204, 204, 204, 0.78);
+		}
+		.home-product-bottom h3 {
+		    font-size: 1.5em;
+		    margin-bottom: 0.2em;
+		    font-family: 'Oswald', sans-serif;
+		}
+		.home-product-bottom h3 a{
+			color: #fff;
+		}
+		.home-product-bottom p {
+		    font-size: 1em;
+		    color: #fff;
 		}
