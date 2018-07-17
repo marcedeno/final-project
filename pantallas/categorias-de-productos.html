@@ -1,14 +1,94 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>Just Buy</title>
-    <link rel="shortcut icon" type="image/png" href="img/icon.png"/>
+    <link rel="shortcut icon" type="image/png" href="../img/icon.png"/>
+    <link rel="stylesheet" href="assets/css/main.css"/>
   </head>
 
-  <div ng-include="" src="'pantallas/nav-bar.html'"></div>
-  
-  <body>
+  <!-- Header -->
+  <header id="header">
+    <div class="inner">
+      <a href="index.html" class="logo">buyClothes</a>
+      <nav id="nav">
 
+        <!-- Carrito de Compra -->
+        <div class="cart box_1">
+          <a href="productos-seleccionados.html">
+            <h3>
+              <img src="img/cart.png" alt=""/>
+              <div class="total">
+                <span class="simpleCart_total"></span></div>
+              </h3>
+            </a>
+            <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+          </div>
+
+
+
+        <!-- Botón Salir -->
+        <a ng-click="ctrl.salir()">Salir</a>
+      </nav>
+    </div>
+  </header>
+  <a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+  <body>
+    <!-- Bloque de Opciones -->
+    <div class="productos">
+      <div class="home-block">
+        <div class="container">
+          <div class="home-block-main">
+            <div class="col-md-3 home-grid">
+              <div class="home-product-main">
+                <div class="home-product-top">
+                  <a href="product.html"><img src="img/h1.jpg" alt="" class="img-responsive zoom-img"></a>
+                </div>
+                <div class="home-product-bottom">
+                  <h3><a href="single.html">Smart Shopping</a></h3>
+                  <p>Explore Now</p>
+                </div>
+                <div class="srch">
+                  <span>$200</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 home-grid">
+              <div class="home-product-main">
+                <div class="home-product-top">
+                  <a href="product.html"><img src="img/h15.jpg" alt="" class="img-responsive zoom-img"></a>
+                </div>
+                <div class="home-product-bottom">
+                  <h3><a href="single.html">Smart Shopping</a></h3>
+                  <p>Explore Now</p>
+                </div>
+                <div class="srch">
+                  <span>$250</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 home-grid">
+              <div class="home-product-main">
+                <div class="home-product-top">
+                  <a href="product.html"><img src="img/h36.jpg" alt="" class="img-responsive zoom-img"></a>
+                </div>
+                <div class="home-product-bottom">
+                  <h3><a href="single.html">Smart Shopping</a></h3>
+                  <p>Explore Now</p>
+                </div>
+                <div class="srch">
+                  <span>$150</span>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Archivo JavaScript de bootstrap -->
+    <script src="bootstrap-4.1.1/dist/js/bootstrap.js"></script>
   </body>
 </html>
