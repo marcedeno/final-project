@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Just Buy</title>
+    <link rel="shortcut icon" type="image/png" href="../img/icon.png"/>
+
+    <!-- Estilo -->
+    <link rel="stylesheet" href="pantallas/css/iniciar-sesion.css">
+
+  </head>
+
+  <div ng-include="" src="'pantallas/nav-bar.html'"></div>
+
+  <body>
+    <img id="backgroundimage" src="pantallas/moda.jpg">
+
+    <div class="login-wrap">
+      <div class="login-html">
+        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Iniciar Sesión</label>
+        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Registrarme</label>
+        <div class="login-form">
+
+          <!-- INICIAR SESIÓN -->
+          <div class="sign-in-htm">
+            <div class="group">
+              <label for="user" class="label">Usuario</label>
+              <input id="user" type="text" class="input" ng-model="login_user">
+            </div>
+            <div class="group">
+              <label for="pass" class="label">Contraseña</label>
+              <input id="pass" type="password" class="input" data-type="password" ng-model="pass_user">
+            </div>
+            <div class="group gen1">
+              <label for="gen" class="label">Género</label>
+              <select class="genero" id="gen1" ng-model="gen_user">
+                <option>Femenino</option>
+                <option>Maculino</option>
+              </select>
+            </div>
+            <div class="group registrar">
+              <input type="submit" class="button" value="Aceptar" ng-click="ctrl.iniciar()">
+            </div>
+          </div>
+
+          <!-- REGISTRARSE -->
+          <div class="sign-up-htm">
+            <div class="group user">
+              <label for="user" class="label">Usuario</label>
+              <input id="user" type="text" class="input" ng-model="new_user">
+            </div>
+            <div class="group pass">
+              <label for="pass" class="label">Contraseña</label>
+              <input id="pass" type="password" class="input" data-type="new_pass">
+            </div>
+            <div class="group correo">
+              <label for="pass" class="label">Correo Electrónico</label>
+              <input id="pass" type="text" class="input" ng-model="user_email">
+            </div>
+            <div class="group age">
+              <label for="age" class="label">Edad</label>
+              <input id="age" type="text" class="input" data-type="age" ng-model="age_user">
+            </div>
+            <div class="group gen">
+              <label for="gen" class="label">Género</label>
+              <select class="genero" id="gen2" ng-model="new_ge_user">
+                <option>Femenino</option>
+                <option>Maculino</option>
+              </select>
+            </div>
+            <div class="group registrar">
+              <input type="submit" class="button" value="Aceptar" ng-click="ctrl.registrarme()">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Archivo JavaScript de bootstrap -->
+    <script src="bootstrap-4.1.1/dist/js/bootstrap.js"></script>
+  </body>
+</html>
