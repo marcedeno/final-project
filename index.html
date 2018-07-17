@@ -6,13 +6,13 @@
     <link rel="shortcut icon" type="image/png" href="img/icon.png"/>
 
     <!-- Libreria jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
 
     <!-- Libreria AngularJs -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="angular-1.6.10/angular.min.js"></script>
 
     <!-- Paquete de CSS bootstrap -->
-    <link rel="stylesheet" href="bootstrap-4.0.0/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-4.1.1/dist/css/bootstrap.css">
 
     <!-- Archivo del controlador -->
     <script src="js/controller.js"></script>
@@ -20,9 +20,15 @@
   <body ng-controller="finalProject as ctrl" ng-style="ctrl.background">
 
     <!-- Banner -->
-    <div ng-include="" src="'pantallas/banner-de-inicio.html'" ng-style="ctrl.backgrount_banner"></div>
+    <div ng-if="!ctrl.accederCuenta" ng-include="" src="'banner-de-inicio.html'" ng-style="ctrl.backgrount_banner"></div>
+
+    <!-- Acceder -->
+    <div ng-if="ctrl.accederCuenta" ng-include="" src="'pantallas/iniciar-sesion.html'"></div>
+
+    <!-- Categoria de Productos -->
+    <div ng-if="false" ng-include="" src="'categorias-de-productos.html'"></div>
 
     <!-- Archivo JavaScript de bootstrap -->
-    <script src="bootstrap-4.0.0/dist/js/bootstrap.js"></script>
+    <script src="bootstrap-4.1.1/dist/js/bootstrap.js"></script>
   </body>
 </html>
