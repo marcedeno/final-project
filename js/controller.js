@@ -5,6 +5,8 @@ app.controller('finalProject', function($scope){
 
    var vm = this;
    vm.accederCuenta = false;
+   vm.mostrarbanner = true;
+   vm.categorias = false;
 
    // Fondo de Pantalla
    vm.img = 'img/wallpaper.jpg';
@@ -16,17 +18,24 @@ app.controller('finalProject', function($scope){
 
    vm.acceder = function(){
      vm.accederCuenta = true;
+     vm.mostrarbanner = false;
    };
 
    vm.iniciar = function(){
-     console.log("Hola");
+     vm.accederCuenta = false;
+     vm.mostrarbanner = false;
+     vm.categorias = true;
    };
 
    vm.registrarme = function(){
-     console.log("Bienvenido");
+     vm.accederCuenta = false;
+     vm.mostrarbanner = false;
+     vm.categorias = true;
    };
 
    vm.salir = function(){
+     vm.mostrarbanner = true;
+     vm.categorias = false;
      vm.accederCuenta = false;
    };
 
